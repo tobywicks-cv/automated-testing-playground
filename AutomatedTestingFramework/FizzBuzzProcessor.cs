@@ -12,6 +12,10 @@ public class FizzBuzzProcessor
             {
                 list.Add("Fizz");  
             }
+            else if (i % 5 == 0)
+            {
+                list.Add("Buzz");  
+            }
             else
             {
                 list.Add(i.ToString());  
