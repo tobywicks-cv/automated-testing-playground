@@ -31,4 +31,12 @@ public class UnitTest1
         
         await Verifier.Verify(lines);
     }
+    
+    [Fact]
+    public async Task Given1To100_WhenRunningFizzBuzz_WhenWritesFizzAndBuzzMultipleOfFiveAndThree()
+    {
+        var lines = FizzBuzzProcessor.GetOutput();
+        
+        await Verifier.Verify(lines);
+    }
 }
