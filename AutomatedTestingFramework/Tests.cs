@@ -33,5 +33,14 @@ public class UnitTest1
 
         Assert.Equal(1, neighbours);
     }
-    
+
+    [Fact]
+    public void GivenACellWithDeadLeftAdjacentNeighbour_WhenGettingNeighbours_ThenReturns0()
+    {
+        var data = new GameOfLife.State([0, 0]);
+        var neighbours = data.GetAliveNeighboursCount(1);
+
+        Assert.Equal(0, neighbours);
+    }
+
 }
