@@ -17,10 +17,14 @@ public class GameOfLife
         {
             var count = 0;
             
-            if (LeftAdjacentNeightbourAlive(position)) count++;
-            if (RightAdjacentAlive(position)) count++;
+            if (LeftAlive(position)) count++;
+            if (RightAlive(position)) count++;
+            if (BelowAlive(position))
+            {
+                count++;
+            }
             
-            if (position + _width < _data.Length && _data[position + _width] == 1)
+            if (AboveAlive(position))
             {
                 count++;
             }
@@ -28,12 +32,22 @@ public class GameOfLife
             return count;
         }
 
-        private bool RightAdjacentAlive(int position)
+        private bool AboveAlive(int position)
+        {
+            return position - _width >= 0 && _data[position - _width] == 1;
+        }
+
+        private bool BelowAlive(int position)
+        {
+            return position + _width < _data.Length && _data[position + _width] == 1;
+        }
+
+        private bool RightAlive(int position)
         {
             return position - 1 >= 0 && _data[position - 1] == 1;
         }
 
-        private bool LeftAdjacentNeightbourAlive(int position)
+        private bool LeftAlive(int position)
         {
             return position + 1 < _data.Length && _data[position + 1] == 1;
         }
