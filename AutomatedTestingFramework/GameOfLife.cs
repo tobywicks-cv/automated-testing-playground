@@ -24,11 +24,6 @@ public class GameOfLife
             {
                 count++;
             }
-            else
-            {
-
-                count++;//wrong
-            }
 
             return count;
         }

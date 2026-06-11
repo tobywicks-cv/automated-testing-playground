@@ -53,7 +53,6 @@ public class UnitTest1
 
         Assert.Equal(1, neighbours);
     }
-
     
     [Fact]
     public void GivenDeadCellBelow_WhenGettingNeighbours_ThenReturns0()
