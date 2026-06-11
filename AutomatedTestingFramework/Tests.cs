@@ -65,4 +65,15 @@ public class UnitTest1
         Assert.Equal(0, neighbours);
     }
 
+    [Fact]
+    public void GivenAliveCellAbove_WhenGettingNeighbours_ThenReturns1()
+    {
+        var data = new GameOfLife.State(
+        [1, 0,
+              0, 0], 2);
+        var neighbours = data.GetAliveNeighboursCount(2);
+
+        Assert.Equal(1, neighbours);
+    }
+
 }
