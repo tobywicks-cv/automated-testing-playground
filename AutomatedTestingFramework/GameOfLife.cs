@@ -26,7 +26,6 @@ public class GameOfLife
             }
 
             return count;
-
         }
     }
     
