@@ -5,10 +5,12 @@ public class GameOfLife
     public class State
     {
         private readonly int[] _data;
+        private readonly int _width;
 
-        public State(int[] data)
+        public State(int[] data, int width = 2)
         {
             _data = data;
+            _width = width;
         }
 
         public int GetAliveNeighboursCount(int position)

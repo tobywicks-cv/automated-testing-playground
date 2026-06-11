@@ -43,4 +43,15 @@ public class UnitTest1
         Assert.Equal(0, neighbours);
     }
 
+    [Fact]
+    public void GivenACellWithAliveBelowNeighbour_WhenGettingNeighbours_ThenReturns1()
+    {
+        var data = new GameOfLife.State(
+        [0, 0,
+              1, 0], 2);
+        var neighbours = data.GetAliveNeighboursCount(0);
+
+        Assert.Equal(1, neighbours);
+    }
+
 }
