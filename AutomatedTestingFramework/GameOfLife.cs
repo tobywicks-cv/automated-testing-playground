@@ -11,7 +11,7 @@ public class GameOfLife
             _data = data;
         }
 
-        public int GetNeighboursCount(int position)
+        public int GetAliveNeighboursCount(int position)
         {
             var count = 0;
             
