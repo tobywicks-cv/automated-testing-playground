@@ -21,6 +21,10 @@ public class GameOfLife
             if (RightAlive(position)) count++;
             if (BelowAlive(position)) count++;
             if (AboveAlive(position)) count++;
+            if (position - _width - 1 >= 0 && _data[position - _width - 1] == 1)
+            {
+                count++;
+            }
 
             return count;
         }
