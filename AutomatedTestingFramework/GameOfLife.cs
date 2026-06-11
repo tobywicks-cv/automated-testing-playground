@@ -19,18 +19,8 @@ public class GameOfLife
             
             if (LeftAlive(position)) count++;
             if (RightAlive(position)) count++;
-            if (BelowAlive(position))
-            {
-                count++;
-            }
-            
-            if (AboveAlive(position))
-            {
-                count++;
-            }
-            else
-            {
-            }
+            if (BelowAlive(position)) count++;
+            if (AboveAlive(position)) count++;
 
             return count;
         }
