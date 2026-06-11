@@ -28,6 +28,9 @@ public class GameOfLife
             {
                 count++;
             }
+            else
+            {
+            }
 
             return count;
         }
