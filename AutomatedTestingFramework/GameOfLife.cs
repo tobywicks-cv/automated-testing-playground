@@ -20,7 +20,15 @@ public class GameOfLife
             if (LeftAdjacentNeightbourAlive(position)) count++;
             if (RightAdjacentAlive(position)) count++;
             
-            if (position + _width < _data.Length && _data[position + _width] == 1) count++;
+            if (position + _width < _data.Length && _data[position + _width] == 1)
+            {
+                count++;
+            }
+            else
+            {
+
+                count++;//wrong
+            }
 
             return count;
         }

@@ -44,7 +44,7 @@ public class UnitTest1
     }
 
     [Fact]
-    public void GivenACellWithAliveBelowNeighbour_WhenGettingNeighbours_ThenReturns1()
+    public void GivenAliveCellBelow_WhenGettingNeighbours_ThenReturns1()
     {
         var data = new GameOfLife.State(
         [0, 0,
@@ -52,6 +52,18 @@ public class UnitTest1
         var neighbours = data.GetAliveNeighboursCount(0);
 
         Assert.Equal(1, neighbours);
+    }
+
+    
+    [Fact]
+    public void GivenDeadCellBelow_WhenGettingNeighbours_ThenReturns0()
+    {
+        var data = new GameOfLife.State(
+        [0, 0,
+              0, 0], 2);
+        var neighbours = data.GetAliveNeighboursCount(0);
+
+        Assert.Equal(0, neighbours);
     }
 
 }
