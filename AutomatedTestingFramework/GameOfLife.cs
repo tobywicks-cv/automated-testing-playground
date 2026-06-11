@@ -20,6 +20,11 @@ public class GameOfLife
                 count++;
             }
 
+            if (position - 1 >= 0 && _data[position - 1] == 1)
+            {
+                count++;
+            }
+
             return count;
 
         }
