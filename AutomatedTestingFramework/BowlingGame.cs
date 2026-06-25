@@ -2,13 +2,15 @@ namespace AutomatedTestingFramework;
 
 public class BowlingGame
 {
-    void Roll(int)
+    private int _score;
+
+    public void Roll(int pinsKnockedDown)
     {
-        
+        _score += pinsKnockedDown;
     }
 
-    int Score()
+    public int Score()
     {
-        
+        return _score;
     }
 }
