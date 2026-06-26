@@ -23,4 +23,9 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+        <ProjectReference Include="..\GameOfLife\GameOfLife.csproj" />
+        <ProjectReference Include="..\BowlingGame\BowlingGame.csproj" />
+    </ItemGroup>
+
 </Project>
